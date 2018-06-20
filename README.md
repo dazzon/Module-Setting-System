@@ -111,6 +111,6 @@ if (currentSetting instanceof Boolean) {
 }
 ```
 
-That will help you a lot for limiting settings to their bounds (like minimum, maximum or options) as well.
+That will help you a lot for limiting settings to their bounds (like minimum, maximum or options) as well. You can also query, whether the minimum, maximum or options are null. The reason I made an extra manager for the settings is that this gives you the opportunity to give a null-parent to a setting and to create them outside a module (for e.g. "global settings").
 
 If you still have questions, just let me know and I'll try my best to help you :)
