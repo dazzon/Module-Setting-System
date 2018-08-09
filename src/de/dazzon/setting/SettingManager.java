@@ -1,5 +1,7 @@
 package de.dazzon.setting;
 
+import de.dazzon.module.Module;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class SettingManager {
     }
 
     /**
-     * @return the list all settings are contained in
+     * @return the list all settings are contained in.
      */
     public List<Setting> getSettings() {
         return this.settings;
@@ -32,8 +34,8 @@ public class SettingManager {
     /**
      * Returns all settings of the given parent module.
      *
-     * @param parent the parent module the settings have to be of
-     * @return the settings of the parent module
+     * @param parent the parent module the settings have to be of.
+     * @return the settings of the parent module.
      */
     public List<Setting> getSettings(Module parent) {
         final List<Setting> filteredSettings = new ArrayList<>();
@@ -48,9 +50,9 @@ public class SettingManager {
     /**
      * Returns the by parent module and name given setting as its setting instance.
      *
-     * @param parent the parent module of the setting
-     * @param name the name of the setting
-     * @return the setting's instance as a setting
+     * @param parent the parent module of the setting.
+     * @param name the name of the setting.
+     * @return the setting's instance as a setting.
      */
     public Setting getSetting(Module parent, String name) {
         for (Setting setting : this.settings) {

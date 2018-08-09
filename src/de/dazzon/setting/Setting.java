@@ -1,5 +1,8 @@
 package de.dazzon.setting;
 
+import de.dazzon.core.Client;
+import de.dazzon.module.Module;
+
 /**
  * Superclass for settings.
  *
@@ -23,10 +26,10 @@ public class Setting<T> {
      * Setting constructor. Defines, beneath the parent module and the name of the setting,
      * its state and whether it is visible.
      *
-     * @param parent the parent module of the setting
+     * @param parent the parent module of the setting.
      * @param name the name of the setting
-     * @param state the state of the setting
-     * @param visible whether the setting is visible
+     * @param state the state of the setting.
+     * @param visible whether the setting is visible.
      */
     public Setting(Module parent, String name, T state, boolean visible) {
         this(parent, name, null, null, null, state, visible);
@@ -36,12 +39,12 @@ public class Setting<T> {
      * Setting constructor. Defines, beneath the parent module and the name of the setting,
      * its minimum and maximum, its state and whether it is visible.
      *
-     * @param parent the parent module of the setting
-     * @param name the name of the setting
-     * @param min the minimum of the setting
-     * @param max the maximum of the setting
-     * @param state the state of the setting
-     * @param visible whether the setting is visible
+     * @param parent the parent module of the setting.
+     * @param name the name of the setting.
+     * @param min the minimum of the setting.
+     * @param max the maximum of the setting.
+     * @param state the state of the setting.
+     * @param visible whether the setting is visible.
      */
     public Setting(Module parent, String name, T min, T max, T state, boolean visible) {
         this(parent, name, min, max, null, state, visible);
@@ -51,11 +54,11 @@ public class Setting<T> {
      * Setting constructor. Defines, beneath the parent module and the name of the setting,
      * its options, its state and whether it is visible.
      *
-     * @param parent the parent module of the setting
-     * @param name the name of the setting
-     * @param options the options of the setting
-     * @param state the state of the setting
-     * @param visible whether the setting is visible
+     * @param parent the parent module of the setting.
+     * @param name the name of the setting.
+     * @param options the options of the setting.
+     * @param state the state of the setting.
+     * @param visible whether the setting is visible.
      */
     public Setting(Module parent, String name, T[] options, T state, boolean visible) {
         this(parent, name, null, null, options, state, visible);
@@ -74,49 +77,49 @@ public class Setting<T> {
     }
 
     /**
-     * @return the parent module of the setting
+     * @return the parent module of the setting.
      */
     public Module getParent() {
         return this.parent;
     }
 
     /**
-     * @return the name of the setting
+     * @return the name of the setting.
      */
     public String getName() {
         return this.name;
     }
 
     /**
-     * @return the minimum of the setting
+     * @return the minimum of the setting.
      */
     public T getMin() {
         return this.min;
     }
 
     /**
-     * @return the maximum of the setting
+     * @return the maximum of the setting.
      */
     public T getMax() {
         return this.max;
     }
 
     /**
-     * @return the options of the setting
+     * @return the options of the setting.
      */
     public T[] getOptions() {
         return this.options;
     }
 
     /**
-     * @return the state of the setting
+     * @return the state of the setting.
      */
     public T getState() {
         return this.state;
     }
 
     /**
-     * @param state defines the new state of the setting
+     * @param state defines the new state of the setting.
      */
     public void setState(T state) {
         this.state = state;
@@ -124,14 +127,14 @@ public class Setting<T> {
     }
 
     /**
-     * @return whether the setting is visible
+     * @return whether the setting is visible.
      */
     public boolean isVisible() {
         return this.visible;
     }
 
     /**
-     * @param visible defines the new state of the visibility of the setting
+     * @param visible defines the new state of the visibility of the setting.
      */
     public void setVisible(boolean visible) {
         this.visible = visible;
